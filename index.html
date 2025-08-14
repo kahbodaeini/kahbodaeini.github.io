@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rey | Academic Portfolio</title>
+  <meta name="description" content="Academic portfolio of Rey – research, publications, teaching, and contact." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎓</text></svg>">
+  <style>
+    :root{
+      --bg:#0b0c0f; --bg2:#111317; --text:#e8eaed; --muted:#aab0b6; --acc:#8b5cf6; --card:#151821; --border:#232634;
+      --max:980px; --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0; padding:0; background:radial-gradient(1200px 700px at 10% -10%, #1b1f2a, transparent), var(--bg); color:var(--text); font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";}
+    a{color:var(--text); text-decoration:none}
+    a:hover{color:#fff; text-decoration:underline}
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px}
+    header{display:flex; gap:18px; align-items:center; padding:16px; background:linear-gradient(180deg,var(--card),transparent); border:1px solid var(--border); border-radius:var(--radius); backdrop-filter: blur(6px); position:sticky; top:16px; z-index:10}
+    header img{width:72px; height:72px; border-radius:50%; border:2px solid var(--border); object-fit:cover}
+    .title{flex:1}
+    .title h1{margin:0; font-size:1.6rem}
+    .title p{margin:.25rem 0 0; color:var(--muted)}
+    nav{display:flex; gap:14px; flex-wrap:wrap}
+    nav a{padding:8px 12px; border:1px solid var(--border); border-radius:12px; background:var(--bg2)}
+
+    .grid{display:grid; grid-template-columns: 1fr; gap:18px; margin-top:18px}
+    @media (min-width:840px){ .grid{grid-template-columns: 1.2fr .8fr} }
+
+    .card{background:linear-gradient(180deg,rgba(139,92,246,.06),rgba(139,92,246,.02) 40%, transparent); border:1px solid var(--border); border-radius:var(--radius); padding:20px}
+    .card h2{margin:0 0 12px}
+    .list{display:grid; gap:12px}
+    .item{padding:12px; border:1px dashed var(--border); border-radius:14px; background:var(--bg2)}
+    .meta{color:var(--muted); font-size:.95rem}
+
+    .tag{display:inline-block; font-size:.8rem; color:#fff; background:linear-gradient(120deg,var(--acc),#22c1c3); padding:4px 8px; border-radius:999px; margin-right:8px}
+    .btn{display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:12px; border:1px solid var(--border); background:var(--bg2);}
+    .btn.primary{background:linear-gradient(120deg,var(--acc),#5b9dff); border-color:transparent}
+
+    footer{margin:24px 0 40px; color:var(--muted); text-align:center}
+    .rows{display:grid; gap:10px}
+    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size:.92rem}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img src="https://avatars.githubusercontent.com/u/9919?s=200" alt="Profile" />
+      <div class="title">
+        <h1>Rey (Kahbod Aeini)</h1>
+        <p>Graduate Student · Distributed Algorithms · University of Calgary → PhD @ UWaterloo (Jan 2026)</p>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#pubs">Publications</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#service">Service</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="grid">
+      <!-- Left column -->
+      <section class="card" id="about">
+        <h2>About</h2>
+        <p>
+          I'm a CS grad student working on <strong>distributed algorithms</strong> (shared-memory systems, wait-free/lock-free design). I enjoy turning rigorous theory into clean, usable systems.
+        </p>
+        <div class="rows">
+          <div class="mono">Theory Lab · University of Calgary (MSc)</div>
+          <div class="mono">ECE PhD (incoming) · University of Waterloo</div>
+          <div>
+            <a class="btn primary" href="#contact">Get in touch</a>
+            <a class="btn" href="cv.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+          </div>
+        </div>
+      </section>
+
+      <aside class="card">
+        <h2>Highlights</h2>
+        <div class="list">
+          <div class="item"><span class="tag">Now</span> Head TA · CPSC 449 (Fall 2025)</div>
+          <div class="item">Research: wait-free multi-locking, randomized contention management</div>
+          <div class="item">Interests: blockchain protocols, applied distributed systems</div>
+        </div>
+      </aside>
+
+      <section class="card" id="research">
+        <h2>Research</h2>
+        <p>My current agenda focuses on building practical wait-free synchronization with strong progress guarantees.</p>
+        <ul>
+          <li>Wait-free multi-locking for multi-object coordination.</li>
+          <li>Randomized algorithms under weak/adaptive adversaries.</li>
+          <li>Linearizability, compositional proofs, and testing harnesses.</li>
+        </ul>
+      </section>
+
+      <aside class="card" id="links">
+        <h2>Links</h2>
+        <div class="rows">
+          <a class="btn" href="#" target="_blank" rel="noopener">Google Scholar</a>
+          <a class="btn" href="#" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="#" target="_blank" rel="noopener">ORCID</a>
+          <a class="btn" href="#" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </aside>
+
+      <section class="card" id="pubs">
+        <h2>Publications & Preprints</h2>
+        <ol class="list">
+          <li class="item">
+            <div><strong>Title Placeholder</strong> — with Coauthors (Year)</div>
+            <div class="meta">Venue · <a href="#">PDF</a> · <a href="#">Code</a> · <a href="#">BibTeX</a></div>
+          </li>
+          <li class="item">
+            <div><strong>Another Work</strong> — with Coauthors (Year)</div>
+            <div class="meta">arXiv · <a href="#">PDF</a> · <a href="#">Project</a></div>
+          </li>
+        </ol>
+      </section>
+
+      <aside class="card" id="teaching">
+        <h2>Teaching</h2>
+        <ul class="list">
+          <li class="item">CPSC 449 · Head/TA · Fall 2025</li>
+          <li class="item">CPSC 351 · Head/TA · 2024–2025</li>
+          <li class="item">CPSC 522 · TA · 2024</li>
+        </ul>
+      </aside>
+
+      <section class="card" id="service">
+        <h2>Service & Mentoring</h2>
+        <ul>
+          <li>Reviewer: (add venues)</li>
+          <li>Student mentor: (add details)</li>
+        </ul>
+      </section>
+
+      <aside class="card" id="contact">
+        <h2>Contact</h2>
+        <p class="meta">University email preferred for academic correspondence.</p>
+        <div class="rows">
+          <div class="mono">you@ucalgary.ca</div>
+          <div class="mono">you@uwaterloo.ca</div>
+          <div class="mono">Calgary, AB · Canada</div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      © <span id="y"></span> Rey. Last updated <span id="d"></span> · Built with plain HTML/CSS.
+    </footer>
+  </div>
+
+  <script>
+    const d = new Date();
+    document.getElementById('y').textContent = d.getFullYear();
+    document.getElementById('d').textContent = d.toLocaleDateString(undefined, {year:'numeric', month:'short'});
+  </script>
+</body>
+</html>
