@@ -30,8 +30,7 @@
       .grid > section.card#research,
       .grid > section.card#teaching,
       .grid > section.card#pubs,
-      .grid > section.card#other-sut-courses,
-      .grid > aside.card#contact {
+  .grid > section.card#other-sut-courses {
         grid-column: 1 / -1;
       }
       .grid{
@@ -107,6 +106,7 @@
     .rows{display:grid; gap:10px}
     .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size:.92rem}
   </style>
+<!-- Contact and Skills row -->
 </head>
 <body>
   <div class="wrap">
@@ -116,10 +116,12 @@
       <p style="margin:.25rem 0 0; color:var(--muted)">University of Calgary</p>
       <nav>
         <a href="#about">About</a>
+        <a href="#skills">Skills</a>
         <a href="#research">Research / Learning</a>
         <a href="#pubs">Publications</a>
         <a href="#teaching">Teaching</a>
-        <a href="#contact">Contact / Links</a>
+        <a href="#links">Links</a>
+        <a href="#contact">Contact</a>
       </nav>
     </header>
 
@@ -128,7 +130,7 @@
       <section class="card" id="about">
         <h2>About</h2>
         <p>
-          I am a Master's student in the Department of Computer Science at the University of Calgary, supervised by Professor Philipp Woelfel. My work focuses on distributed algorithms in shared-memory systems and the theory of distributed computing. My research interests include discrete and distributed algorithms, distributed systems and theoretical computer science with emerging interests in database systems, blockchain, and bioinformatics. Before starting my MSc, I earned a Bachelor of Science in Computer Engineering from Sharif University of Technology in 2023. Outside of my research, I'm always happy to connect about computer science, algorithms, or anything else; the best way to contact me is through my university email.
+          I am a Master's student in the <a href="https://science.ucalgary.ca/computer-science" target="_blank" rel="noopener" style="text-decoration: underline;">Department of Computer Science at the University of Calgary</a>, supervised by <a href="https://radial.cpsc.ucalgary.ca/woelfel/" target="_blank" rel="noopener" style="text-decoration: underline;">Professor Philipp Woelfel</a>. My work focuses on distributed algorithms in shared-memory systems and the theory of distributed computing. My research interests include discrete and distributed algorithms, distributed systems, and theoretical computer science, with emerging interests in database systems, blockchain, and bioinformatics. Before starting my MSc, I earned a Bachelor of Science in <a href="https://ce.sharif.ir/" target="_blank" rel="noopener" style="text-decoration: underline;">Computer Engineering from Sharif University of Technology</a> in 2023. I also have experience as a head teaching assistant and teaching assistant for undergraduate and graduate courses in algorithms and theoretical computer science. Outside of my research, I'm always happy to connect about computer science, algorithms, or anything else; the best way to contact me is through my university email.
         </p>
         <div class="rows">
           <div>
@@ -137,29 +139,21 @@
           </div>
         </div>
       </section>
-
-      <aside class="card" id="links">
-        <h2>Contact / Links</h2>
-        <div class="rows">
-          <a class="btn" href="https://scholar.google.com/citations?user=Kahbod_Aeini" target="_blank" rel="noopener">Google Scholar</a>
-          <a class="btn" href="https://www.linkedin.com/in/kahbodaeini/" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="btn" href="https://github.com/kahbodaeini" target="_blank" rel="noopener">GitHub</a>
-        </div>
-        <p class="meta">University email preferred for academic correspondence.</p>
-        <div class="rows">
-          <div class="mono">kahbod.aeini@ucalgary.ca</div>
-          <div class="mono">ICT 624A, Department of Computer Science, University of Calgary, AB, Canada</div>
-        </div>
+      <aside class="card" id="skills">
+        <h2>Skills</h2>
+        <ul class="list">
+          <li class="item">Algorithms & Analysis, Probability Theory & Randomization, Distributed Computing & Concurrency, Complexity Theory, Data Structures Design & Optimization</li>
+          <li class="item">Python, R, C/C++, Java, Android</li>
+          <li class="item">PostgreSQL, MySQL, MongoDB, Kali Linux, bash, Git</li>
+          <li class="item">NumPy, Pandas, Django, OpenCV, PyTorch, scikit-learn, limma</li>
+          </ul>
       </aside>
 
       <section class="card" id="research">
         <h2>Research / Learning</h2>
-        <p>My current agenda focuses on building practical wait-free synchronization with strong progress guarantees.</p>
-        <ul>
-          <li>Wait-free multi-locking for multi-object coordination.</li>
-          <li>Randomized algorithms under weak/adaptive adversaries.</li>
-          <li>Linearizability, compositional proofs, and testing harnesses.</li>
-        </ul>
+          My research focuses on designing efficient, provably correct <strong>distributed algorithms</strong> in shared-memory systems, with particular attention to wait-free and lock-free synchronization. I am especially interested in how theoretical models, together with my knowledge of <strong>randomization and probability theory</strong>, can inform the design of concurrent systems. My goal is to bridge the gap between theory and practice by developing algorithms that are not only efficient but also straightforward to implement and use in real-world applications.
+        <br>
+          Alongside my research, I actively broaden my expertise in areas that complement and extend my work in distributed computing and algorithms. I am particularly interested in <strong>algorithms of all kinds</strong>, blockchain systems, distributed databases, database theory, complexity theory, and theoretical computer science more generally. I also maintain an active interest in bioinformatics, exploring its algorithmic and data-driven challenges.
       </section>
 
       <section class="card" id="pubs">
@@ -177,60 +171,61 @@
         <h2>Teaching</h2>
         <div class="courses-grid">
           <div class="course-card">
-            <div class="course-title">CPSC 449: Principles of Distributed Computing</div>
+            <div class="course-title">Programming Paradigms</div>
             <span class="uni-badge uni-ucalgary">University of Calgary</span>
             <div class="meta">Semester: Fall 2025</div>
-            <div class="meta">Instructor: Philipp Woelfel</div>
-            <div class="meta">Head TA &mdash; Distributed systems labs</div>
+            <div class="meta">Instructor: Ahmad Nasri</div>
+            <div class="meta">Head TA &mdash; Functional & Logic Programming</div>
           </div>
           <div class="course-card">
-            <div class="course-title">CPSC 351: Data Structures & Algorithms</div>
+            <div class="course-title">Theoretical Foundations of Computer Science II</div>
             <span class="uni-badge uni-ucalgary">University of Calgary</span>
-            <div class="meta">Semester: 2024-2025</div>
+            <div class="meta">Semester: Winter 2025</div>
             <div class="meta">Instructor: Philipp Woelfel</div>
-            <div class="meta">Head TA &mdash; Algorithm analysis</div>
+            <div class="meta">Head TA &mdash; Probability & Languages Theory</div>
             
           </div>
             <div class="course-card">
-              <div class="course-title">CPSC 522: Advanced Algorithms</div>
+              <div class="course-title">Randomized Algorithms</div>
               <span class="uni-badge uni-ucalgary">University of Calgary</span>
-              <div class="meta">Semester: 2024</div>
+              <div class="meta">Semester: Fall 2024</div>
               <div class="meta">Instructor: Philipp Woelfel</div>
-              <div class="meta">TA &mdash; Graduate course support</div>
+              <div class="meta">Graduate Course &mdash; Graduate course support</div>
+          </div>
+          <div class="course-card">
+            <div class="course-title">Theoretical Foundations of Computer Science II</div>
+            <span class="uni-badge uni-ucalgary">University of Calgary</span>
+            <div class="meta">Semester: Winter 2024</div>
+            <div class="meta">Instructor: Philipp Woelfel</div>
+            <div class="meta">Probability & Languages Theory</div>
           </div>
           <div class="course-card">
             <div class="course-title">Introduction to Computer Science for Computer Science Majors I</div>
             <span class="uni-badge uni-ucalgary">University of Calgary</span>
             <div class="meta">Semester: Fall 2023</div>
-            <div class="meta">Instructor: Prof. Richard Zhao</div>
-            <div class="meta">TA &mdash; Python, Data Structures, Tutorials, Marking</div>
-          </div>
-          <div class="course-card">
-            <div class="course-title">CPSC 351: Data Structures & Algorithms</div>            <span class="uni-badge uni-ucalgary">University of Calgary</span>
-            <div class="meta">Semester: 2024-2025</div>
-            <div class="meta">Instructor: Philipp Woelfel</div>
-            <div class="meta">Head TA &mdash; Algorithm analysis</div>
+            <div class="meta">Instructor: Richard Zhao</div>
+            <div class="meta">Python Programming and Data Structures</div>
           </div>
           <div class="course-card">
             <div class="course-title">Data Structure and Algorithms</div>
             <span class="uni-badge uni-sut">Sharif University of Technology</span>
             <div class="meta">Semester: Winter 2022</div>
-            <div class="meta">Instructor: Dr. Mahdi Safarnejad</div>
-            <div class="meta">Head TA &mdash; Led 25 TAs, assignments/project design</div>
+            <div class="meta">Instructor: Mahdi Safarnejad</div>
+            <div class="meta">Head TA &mdash; Led 25 TAs, Data Structures & Foundations of Algorithms</div>
           </div>
           <div class="course-card">
             <div class="course-title">Mobile Programming</div>
             <span class="uni-badge uni-sut">Sharif University of Technology</span>
             <div class="meta">Semester: Winter 2022</div>
-            <div class="meta">Instructor: Dr. Saeid Nari</div>
-            <div class="meta">Head TA &mdash; Project design and grading</div>
+            <div class="meta">Instructor: Saeid Nari</div>
+            <div class="meta">Head TA &mdash; Android & Swift Development</div>
           </div>
           <div class="course-card">
-            <div class="course-title">Numerical Calculations</div>
+            <div class="course-title">Numerical Computations</div>
             <span class="uni-badge uni-sut">Sharif University of Technology</span>
-            <div class="meta">Semester: Fall 2021-2022</div>
-            <div class="meta">Instructor: Dr. Fatemeh Baharifard</div>
-            <div class="meta">Head TA &mdash; Led 10 TAs, project design, TA classes</div>
+            <div class="meta">Semester: Fall 2022</div>
+            <div class="meta">Instructor: Fatemeh Baharifard</div>
+            <div class="meta">Head TA &mdash; Numerical Methods Analysis & Algorithms</div>
           </div>
           <div class="course-card">
             <div class="course-title">Other Courses</div>
@@ -240,11 +235,26 @@
         </div>
       </section>
 
-      <!-- <aside class="card" id="links"> -->
+  <div class="grid" style="grid-template-columns: 1fr 1fr; gap:18px; margin-top:0; grid-column:1 / -1;">
+    <aside class="card" id="links">
+        <h2>Links</h2>
+        <div class="rows">
+          <a class="btn" href="https://scholar.google.com/citations?user=Kahbod_Aeini" target="_blank" rel="noopener">Google Scholar</a>
+          <a class="btn" href="https://www.linkedin.com/in/kahbodaeini/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="https://github.com/kahbodaeini" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </aside>  
+    <aside class="card" id="contact">
+        <h2>Contact</h2>
+        <p class="meta">University email preferred for academic correspondence.</p>
+        <div class="rows">
+          <div class="mono">kahbod.aeini@ucalgary.ca</div>
+          <div class="mono">ICT 624A, Department of Computer Science, University of Calgary, AB, Canada</div>
+        </div>
+      </aside>
+    </div>
 
-      <!-- <aside class="card" id="teaching"> -->
-
-    </main>
+  </main>
 
     <footer>
       © <span id="y"></span> Kahbod Aeini. Last updated <span id="d"></span> · Built with plain HTML/CSS.
