@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kahbod Aeini | Academic Portfolio</title>
+  <title>Kahbod Aeini</title>
   <meta name="description" content="Academic portfolio of Kahbod Aeini – research, publications, teaching, and contact." />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎓</text></svg>">
   <style>
@@ -16,8 +16,8 @@
     a{color:var(--text); text-decoration:none}
     a:hover{color:#fff; text-decoration:underline}
     .wrap{max-width:var(--max); margin:0 auto; padding:28px}
-    header{display:flex; gap:18px; align-items:center; padding:16px; background:linear-gradient(180deg,var(--card),transparent); border:1px solid var(--border); border-radius:var(--radius); backdrop-filter: blur(6px); position:sticky; top:16px; z-index:10}
-    header img{width:72px; height:72px; border-radius:50%; border:2px solid var(--border); object-fit:cover}
+    header{display:flex; gap:18px; align-items:center; padding:16px; background:linear-gradient(180deg,var(--card),transparent); border:1px solid var(--border); border-radius:var(--radius); backdrop-filter: blur(6px);}
+    header img{width:180px; height:180px; border-radius:50%; border:2px solid var(--border); object-fit:cover}
     .title{flex:1}
     .title h1{margin:0; font-size:1.6rem}
     .title p{margin:.25rem 0 0; color:var(--muted)}
@@ -25,9 +25,74 @@
     nav a{padding:8px 12px; border:1px solid var(--border); border-radius:12px; background:var(--bg2)}
 
     .grid{display:grid; grid-template-columns: 1fr; gap:18px; margin-top:18px}
-    @media (min-width:840px){ .grid{grid-template-columns: 1.2fr .8fr} }
+    @media (min-width:840px){
+      .grid > section.card#research,
+      .grid > section.card#teaching,
+      .grid > section.card#pubs,
+      .grid > section.card#other-sut-courses,
+      .grid > aside.card#contact {
+        grid-column: 1 / -1;
+      }
+      .grid{
+        grid-template-columns: 1.2fr .8fr;
+      }
+    }
 
     .card{background:linear-gradient(180deg,rgba(139,92,246,.06),rgba(139,92,246,.02) 40%, transparent); border:1px solid var(--border); border-radius:var(--radius); padding:20px}
+    /* Teaching section custom grid */
+    #teaching {
+      width: 100%;
+      min-height: 340px;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-start;
+    }
+    #teaching .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+    #teaching .course-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      min-height: 120px;
+    }
+    .uni-badge {
+      display: inline-block;
+      font-size: 0.92rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 999px;
+      margin-bottom: 4px;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+    .uni-sut {
+      background: linear-gradient(90deg, #0072ce 60%, #fff 100%);
+      color: #003366;
+      border: 1px solid #0072ce;
+    }
+    .uni-ucalgary {
+      background: linear-gradient(90deg, #d6001c 60%, #ffd600 100%);
+      color: #7c0000;
+      border: 1px solid #d6001c;
+    }
+    #teaching .course-title {
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin-bottom: 2px;
+    }
+    #teaching .meta {
+      color: var(--muted);
+      font-size: .97rem;
+    }
     .card h2{margin:0 0 12px}
     .list{display:grid; gap:12px}
     .item{padding:12px; border:1px dashed var(--border); border-radius:14px; background:var(--bg2)}
@@ -46,17 +111,14 @@
   <div class="wrap">
     <header>
       <img src="https://kahbodaeini.github.io/pic.JPG" alt="Profile" />
-      <div class="title">
-        <h1>Kahbod Aeini</h1>
-        <p>Master Student · Distributed Algorithms · University of Calgary → PhD @ UWaterloo (Jan 2026)</p>
-      </div>
+      <h1 style="margin:0; font-size:1.6rem">Kahbod Aeini</h1>
+      <p style="margin:.25rem 0 0; color:var(--muted)">University of Calgary</p>
       <nav>
         <a href="#about">About</a>
-        <a href="#research">Research</a>
+        <a href="#research">Research / Learning</a>
         <a href="#pubs">Publications</a>
         <a href="#teaching">Teaching</a>
-        <a href="#service">Service</a>
-        <a href="#contact">Contact</a>
+        <a href="#contact">Contact / Links</a>
       </nav>
     </header>
 
@@ -65,29 +127,32 @@
       <section class="card" id="about">
         <h2>About</h2>
         <p>
-          I'm a CS grad student working on <strong>distributed algorithms</strong> (shared-memory systems, wait-free/lock-free design). I enjoy turning rigorous theory into clean, usable systems.
+          I am a Master's student in the Department of Computer Science at the University of Calgary, supervised by Professor Philipp Woelfel. My work focuses on distributed algorithms in shared-memory systems and the theory of distributed computing. My research interests include discrete and distributed algorithms, distributed systems and theoretical computer science with emerging interests in database systems, blockchain, and bioinformatics. Before starting my MSc, I earned a Bachelor of Science in Computer Engineering from Sharif University of Technology in 2023. Outside of my research, I'm always happy to connect about computer science, algorithms, or anything else; the best way to contact me is through my university email.
         </p>
         <div class="rows">
-          <div class="mono">Theory Lab · University of Calgary (MSc)</div>
-          <div class="mono">ECE PhD (incoming) · University of Waterloo</div>
           <div>
-            <a class="btn primary" href="#contact">Get in touch</a>
+            <a class="btn primary" href="mailto:kahbodaeini@ucalgary.ca">Get in touch</a>
             <a class="btn" href="https://kahbodaeini.github.io/Kahbod_Aeini___CV.pdf" target="_blank" rel="noopener">CV (PDF)</a>
           </div>
         </div>
       </section>
 
-      <aside class="card">
-        <h2>Highlights</h2>
-        <div class="list">
-          <div class="item"><span class="tag">Now</span> Head TA · CPSC 449 (Fall 2025)</div>
-          <div class="item">Research: wait-free multi-locking, randomized contention management</div>
-          <div class="item">Interests: blockchain protocols, applied distributed systems</div>
+      <aside class="card" id="links">
+        <h2>Contact / Links</h2>
+        <div class="rows">
+          <a class="btn" href="https://scholar.google.com/citations?user=Kahbod_Aeini" target="_blank" rel="noopener">Google Scholar</a>
+          <a class="btn" href="https://www.linkedin.com/in/kahbodaeini/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="https://github.com/kahbodaeini" target="_blank" rel="noopener">GitHub</a>
+        </div>
+        <p class="meta">University email preferred for academic correspondence.</p>
+        <div class="rows">
+          <div class="mono">kahbod.aeini@ucalgary.ca</div>
+          <div class="mono">ICT 624A, Department of Computer Science, University of Calgary, AB, Canada</div>
         </div>
       </aside>
 
       <section class="card" id="research">
-        <h2>Research</h2>
+        <h2>Research / Learning</h2>
         <p>My current agenda focuses on building practical wait-free synchronization with strong progress guarantees.</p>
         <ul>
           <li>Wait-free multi-locking for multi-object coordination.</li>
@@ -96,56 +161,88 @@
         </ul>
       </section>
 
-      <aside class="card" id="links">
-        <h2>Links</h2>
-        <div class="rows">
-          <a class="btn" href="#" target="_blank" rel="noopener">Google Scholar</a>
-          <a class="btn" href="#" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn" href="#" target="_blank" rel="noopener">ORCID</a>
-          <a class="btn" href="#" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
-      </aside>
-
       <section class="card" id="pubs">
-        <h2>Publications & Preprints</h2>
+        <h2>Publications</h2>
         <ol class="list">
           <li class="item">
-            <div><strong>Title Placeholder</strong> — with Coauthors (Year)</div>
-            <div class="meta">Venue · <a href="#">PDF</a> · <a href="#">Code</a> · <a href="#">BibTeX</a></div>
-          </li>
-          <li class="item">
-            <div><strong>Another Work</strong> — with Coauthors (Year)</div>
-            <div class="meta">arXiv · <a href="#">PDF</a> · <a href="#">Project</a></div>
+            <div><strong>Simple and Efficient Randomized Wait-Free Locks</strong></div>
+            <div class="meta">Kahbod Aeini, Dante Bencivenga, George Giakkoupis, Philipp Woelfel</div>
+            <div class="meta">Submitted to ACM-SIAM Symposium on Discrete Algorithms (SODA) 2026 (under review)</div>
           </li>
         </ol>
       </section>
 
-      <aside class="card" id="teaching">
+      <section class="card" id="teaching">
         <h2>Teaching</h2>
-        <ul class="list">
-          <li class="item">CPSC 449 · Head/TA · Fall 2025</li>
-          <li class="item">CPSC 351 · Head/TA · 2024–2025</li>
-          <li class="item">CPSC 522 · TA · 2024</li>
-        </ul>
-      </aside>
-
-      <section class="card" id="service">
-        <h2>Service & Mentoring</h2>
-        <ul>
-          <li>Reviewer: (add venues)</li>
-          <li>Student mentor: (add details)</li>
-        </ul>
+        <div class="courses-grid">
+          <div class="course-card">
+            <div class="course-title">CPSC 449: Principles of Distributed Computing</div>
+            <span class="uni-badge uni-ucalgary">University of Calgary</span>
+            <div class="meta">Semester: Fall 2025</div>
+            <div class="meta">Instructor: Philipp Woelfel</div>
+            <div class="meta">Head TA &mdash; Distributed systems labs</div>
+          </div>
+          <div class="course-card">
+            <div class="course-title">CPSC 351: Data Structures & Algorithms</div>
+            <span class="uni-badge uni-ucalgary">University of Calgary</span>
+            <div class="meta">Semester: 2024-2025</div>
+            <div class="meta">Instructor: Philipp Woelfel</div>
+            <div class="meta">Head TA &mdash; Algorithm analysis</div>
+            
+          </div>
+            <div class="course-card">
+              <div class="course-title">CPSC 522: Advanced Algorithms</div>
+              <span class="uni-badge uni-ucalgary">University of Calgary</span>
+              <div class="meta">Semester: 2024</div>
+              <div class="meta">Instructor: Philipp Woelfel</div>
+              <div class="meta">TA &mdash; Graduate course support</div>
+          </div>
+          <div class="course-card">
+            <div class="course-title">Introduction to Computer Science for Computer Science Majors I</div>
+            <span class="uni-badge uni-ucalgary">University of Calgary</span>
+            <div class="meta">Semester: Fall 2023</div>
+            <div class="meta">Instructor: Prof. Richard Zhao</div>
+            <div class="meta">TA &mdash; Python, Data Structures, Tutorials, Marking</div>
+          </div>
+          <div class="course-card">
+            <div class="course-title">CPSC 351: Data Structures & Algorithms</div>            <span class="uni-badge uni-ucalgary">University of Calgary</span>
+            <div class="meta">Semester: 2024-2025</div>
+            <div class="meta">Instructor: Philipp Woelfel</div>
+            <div class="meta">Head TA &mdash; Algorithm analysis</div>
+          </div>
+          <div class="course-card">
+            <div class="course-title">Data Structure and Algorithms</div>
+            <span class="uni-badge uni-sut">Sharif University of Technology</span>
+            <div class="meta">Semester: Winter 2022</div>
+            <div class="meta">Instructor: Dr. Mahdi Safarnejad</div>
+            <div class="meta">Head TA &mdash; Led 25 TAs, assignments/project design</div>
+          </div>
+          <div class="course-card">
+            <div class="course-title">Mobile Programming</div>
+            <span class="uni-badge uni-sut">Sharif University of Technology</span>
+            <div class="meta">Semester: Winter 2022</div>
+            <div class="meta">Instructor: Dr. Saeid Nari</div>
+            <div class="meta">Head TA &mdash; Project design and grading</div>
+          </div>
+          <div class="course-card">
+            <div class="course-title">Numerical Calculations</div>
+            <span class="uni-badge uni-sut">Sharif University of Technology</span>
+            <div class="meta">Semester: Fall 2021-2022</div>
+            <div class="meta">Instructor: Dr. Fatemeh Baharifard</div>
+            <div class="meta">Head TA &mdash; Led 10 TAs, project design, TA classes</div>
+          </div>
+          <div class="course-card">
+            <div class="course-title">Other Courses</div>
+            <span class="uni-badge uni-sut">Sharif University of Technology</span>
+            <div class="meta"> Linear Algebra - Database Design - Compiler Design - Computer Structure and Languages - Advanced Programming - Logic Design
+          </div>
+        </div>
       </section>
 
-      <aside class="card" id="contact">
-        <h2>Contact</h2>
-        <p class="meta">University email preferred for academic correspondence.</p>
-        <div class="rows">
-          <div class="mono">you@ucalgary.ca</div>
-          <div class="mono">you@uwaterloo.ca</div>
-          <div class="mono">Calgary, AB · Canada</div>
-        </div>
-      </aside>
+      <!-- <aside class="card" id="links"> -->
+
+      <!-- <aside class="card" id="teaching"> -->
+
     </main>
 
     <footer>
