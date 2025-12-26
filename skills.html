@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Skills — Kahbod Aeini</title>
+  <meta name="description" content="Skills and technical expertise of Kahbod Aeini." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎓</text></svg>">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img src="https://kahbodaeini.github.io/pic.JPG" alt="Profile" />
+      <h1 style="margin:0; font-size:1.6rem">Kahbod Aeini</h1>
+      <p style="margin:.25rem 0 0; color:var(--muted)">University of Calgary</p>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="skills.html">Skills</a>
+        <a href="contact.html">Contact</a>
+        <a href="Kahbod_Aeini___CV.pdf" target="_blank" rel="noopener">CV</a>
+      </nav>
+    </header>
+
+    <main class="grid">
+      <aside class="card" id="skills">
+        <h2>Skills</h2>
+        <ul class="list">
+          <li class="item">Algorithms & Analysis, Probability Theory & Randomization, Distributed Computing & Concurrency, Complexity Theory, Data Structures Design & Optimization</li>
+          <li class="item">Python, R, C/C++, Java, Android, Haskell, PostgreSQL, Nix OS, Kali Linux</li>
+          <li class="item">NumPy, Pandas, Django, OpenCV, PyTorch, scikit-learn, limma</li>
+        </ul>
+      </aside>
+    </main>
+
+    <footer>
+      © <span id="y"></span> Kahbod Aeini. Last updated <span id="d"></span> · Built with plain HTML/CSS.
+    </footer>
+  </div>
+
+  <script>
+    const d = new Date();
+    document.getElementById('y').textContent = d.getFullYear();
+    document.getElementById('d').textContent = d.toLocaleDateString(undefined, {year:'numeric', month:'short'});
+  </script>
+</body>
+</html>
