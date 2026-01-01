@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kahbod Aeini — Overview</title>
+  <meta name="description" content="Summary site for Kahbod Aeini with links to research, teaching, skills, and contact pages." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎓</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --text: #1f2933;
+      --muted: #54606e;
+      --accent: #2457f5;
+      --border: #dde3ea;
+      --max: 1050px;
+      --radius: 16px;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: 'DM Sans', 'Segoe UI', system-ui, -apple-system, sans-serif; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .page { max-width: var(--max); margin: 0 auto; padding: 32px 24px 40px; }
+    header { display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: center; margin-bottom: 20px; }
+    header img { width: 110px; height: 110px; border-radius: 12px; object-fit: cover; border: 1px solid var(--border); }
+    .hero h1 { margin: 0; font-size: 2rem; letter-spacing: -0.02em; }
+    .hero p { margin: 6px 0 0; color: var(--muted); max-width: 680px; }
+    nav { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+    nav a { padding: 8px 12px; border: 1px solid var(--border); border-radius: 12px; background: #f1f4f8; color: var(--text); }
+    nav a:hover { background: #e4ebf5; }
+    .layout { display: grid; gap: 18px; }
+    @media (min-width: 820px) { .layout { grid-template-columns: 1.1fr 0.9fr; } }
+    .card { background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.04); }
+    .card h2 { margin: 0 0 10px; font-size: 1.15rem; letter-spacing: -0.01em; }
+    .muted { color: var(--muted); }
+    .list { display: grid; gap: 10px; padding: 0; margin: 0; list-style: none; }
+    .section-link { display: flex; justify-content: space-between; gap: 14px; padding: 12px 14px; border: 1px solid var(--border); border-radius: 12px; background: #f9fbfd; }
+    .section-link strong { display: block; }
+    .chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip { display: inline-flex; align-items: center; padding: 6px 10px; border-radius: 10px; background: #f1f4f8; border: 1px solid var(--border); color: var(--muted); font-size: 0.92rem; }
+    .cta { display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: 12px; border: 1px solid var(--accent); color: #fff; background: var(--accent); font-weight: 600; }
+    .cta.secondary { background: transparent; color: var(--accent); }
+    footer { margin-top: 28px; color: var(--muted); text-align: center; font-size: 0.95rem; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <img src="https://kahbodaeini.github.io/files/pic.JPG" alt="Portrait of Kahbod Aeini" />
+      <div class="hero">
+        <h1>Kahbod Aeini</h1>
+        <p>MSc student in Computer Science at the University of Calgary. I study distributed algorithms for shared-memory systems, focusing on wait-free and lock-free synchronization and how probabilistic techniques improve concurrent designs.</p>
+        <nav aria-label="Primary navigation">
+          <a href="#about">About</a>
+          <a href="research.html">Research</a>
+          <a href="teaching.html">Teaching</a>
+          <a href="skills.html">Skills</a>
+          <a href="contact.html">Contact</a>
+          <a href="Kahbod_Aeini___CV.pdf" target="_blank" rel="noopener">CV</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="card" id="about">
+        <h2>Summary</h2>
+        <p>I design efficient, provably correct distributed algorithms and like to bridge theory and practice. My work centers on synchronization in shared-memory models and the role of randomization in making concurrent systems simpler and faster.</p>
+        <p class="muted" style="margin-top:8px;">Previously: BSc in Computer Engineering from Sharif University of Technology; head TA and TA for programming paradigms, theory, randomized algorithms, and data structures.</p>
+        <div class="chip-row" style="margin-top:10px;">
+          <span class="chip">Distributed algorithms</span>
+          <span class="chip">Randomization</span>
+          <span class="chip">Concurrency</span>
+          <span class="chip">Blockchain & databases (learning)</span>
+        </div>
+      </section>
+
+      <aside class="card" id="contact">
+        <h2>Contact</h2>
+        <p class="muted">University email preferred for academic correspondence.</p>
+        <div style="display:grid; gap:8px; margin:12px 0 16px;">
+          <span>kahbod.aeini@ucalgary.ca</span>
+          <span class="muted">ICT 624A, Department of Computer Science, University of Calgary, AB, Canada</span>
+        </div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="cta" href="mailto:kahbodaeini@ucalgary.ca">Email</a>
+          <a class="cta secondary" href="Kahbod_Aeini___CV.pdf" target="_blank" rel="noopener">CV</a>
+        </div>
+      </aside>
+    </main>
+
+    <section class="card" id="sections" style="margin-top:18px;">
+      <h2>Pages</h2>
+      <ul class="list">
+        <li class="section-link">
+          <div><strong>Research & Learning</strong><span class="muted">Distributed algorithms, synchronization, and probabilistic techniques.</span></div>
+          <span class="muted">Use the top bar to visit.</span>
+        </li>
+        <li class="section-link">
+          <div><strong>Teaching</strong><span class="muted">Head TA and TA across algorithms, theory, programming paradigms, and systems.</span></div>
+          <span class="muted">Use the top bar to visit.</span>
+        </li>
+        <li class="section-link">
+          <div><strong>Skills</strong><span class="muted">Algorithms, probability, distributed computing; Python, C/C++, Java, R, ML tools.</span></div>
+          <span class="muted">Use the top bar to visit.</span>
+        </li>
+        <li class="section-link">
+          <div><strong>Publications</strong><span class="muted">Master's thesis: A Space-Optimal Randomized Wait-Free Lock (University of Calgary).</span></div>
+          <span class="muted">Top bar for links.</span>
+        </li>
+        <li class="section-link">
+          <div><strong>Contact</strong><span class="muted">Email and office details.</span></div>
+          <span class="muted">Top bar for links.</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="card" id="links" style="margin-top:18px;">
+      <h2>Quick links</h2>
+      <div class="chip-row">
+        <a class="chip" href="https://scholar.google.ca/citations?hl=en&user=3Fd5R9YAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+        <a class="chip" href="https://www.linkedin.com/in/kahbod-aeini-833b71190/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="chip" href="https://github.com/kahbodaeini" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="y"></span> Kahbod Aeini. Last updated <span id="d"></span> · Built with plain HTML/CSS.
+    </footer>
+  </div>
+
+  <script>
+    const d = new Date();
+    document.getElementById('y').textContent = d.getFullYear();
+    document.getElementById('d').textContent = d.toLocaleDateString(undefined, { year: 'numeric', month: 'short' });
+  </script>
+</body>
+</html>
