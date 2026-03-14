@@ -50,12 +50,22 @@ p { line-height: 1.6; margin-bottom: 15px; }
 
 .logos-row .uwaterloo-logo,
 .logos-row .ucalgary-logo,
-.logos-row .sharif-logo {
-    width: 72px;
-    height: 48px;
+.logos-row .sharif-logo,
+.logos-row .arctrade-logo {
+    width: 96px;
+    height: 64px;
     object-fit: contain;
     margin: 0;
     flex: 0 0 auto;
+}
+
+.logos-row .uwaterloo-logo {
+    width: 120px;
+    height: 80px;
+}
+
+.logos-row .arctrade-logo {
+    mix-blend-mode: multiply;
 }
 
 .sidebar-name { font-size: 1.75rem; margin-bottom: 5px; font-weight: 700; color: #333; }
