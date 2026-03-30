@@ -83,10 +83,12 @@ p { line-height: 1.6; margin-bottom: 15px; }
 
 /* Navigation */
 .nav-links { margin-bottom: 40px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
-.nav-links a { 
-    margin-right: 18px; font-weight: bold; color: #555; 
-    font-size: 1.05rem; text-transform: uppercase; letter-spacing: 0.3px;
+.nav-links a {
+    margin-right: 12px; font-weight: bold; color: #555;
+    font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.2px;
+    white-space: nowrap;
 }
+.nav-links { white-space: nowrap; overflow-x: auto; }
 .nav-links a:hover { color: #0077cc; }
 .nav-links a.active { color: #0077cc; border-bottom: 2px solid #0077cc; }
 
@@ -113,6 +115,13 @@ ul.styled-list li::before { content: "•"; color: #0077cc; font-weight: bold; p
 .skills-group-title { font-weight: 700; color: #1f3b57; font-size: 0.95rem; }
 .skills-row { display: flex; flex-wrap: wrap; gap: 8px; }
 .skill-pill { background: #eef4fa; color: #1f3b57; padding: 7px 12px; border-radius: 12px; font-weight: 600; font-size: 0.92rem; border: 1px solid #dde6f2; }
+
+/* News Page */
+.news-group { margin-bottom: 30px; }
+.news-month { font-size: 1rem; font-weight: 700; color: #0077cc; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; border-bottom: 1px solid #eef4fa; padding-bottom: 4px; }
+.news-list { list-style: none; padding-left: 0; margin: 0; }
+.news-list li { position: relative; padding-left: 18px; margin-bottom: 8px; font-size: 0.97rem; color: #444; line-height: 1.6; }
+.news-list li::before { content: "–"; color: #aaa; position: absolute; left: 0; }
 
 /* Footer */
 footer { text-align: center; padding: 20px; font-size: 0.85rem; color: #888; border-top: 1px solid #eee; margin-top: auto; }
